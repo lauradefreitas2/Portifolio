@@ -57,7 +57,7 @@ export class App {
   ];
 
   readonly highlights: Experience[] = [
-    { value: 'Bradesco', label: 'investimentos e renda fixa' },
+    { value: 'Backend', label: 'produtos financeiros' },
     { value: '2x', label: 'Azure Certified' },
     { value: 'Open Finance', label: 'integrações reguladas' },
     { value: 'PIX', label: 'pagamentos e rastreabilidade' }
@@ -65,7 +65,7 @@ export class App {
 
   readonly experience: RoleExperience = {
     role: 'Backend Software Engineer',
-    company: 'Bradesco',
+    company: 'Experiência backend',
     period: 'jan 2024 - o momento',
     location: 'Recife, PE · Híbrido',
     summary:
