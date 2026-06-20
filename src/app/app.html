@@ -44,10 +44,10 @@
     <section id="home" class="hero section">
       <div class="section-inner hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">Backend developer | Java, Spring Boot e Angular</p>
+          <p class="eyebrow">Backend Software Engineer · Java · Spring Boot · Azure</p>
           <h1>Laura de Freitas</h1>
           <p class="lead">
-            Desenvolvedora backend de 24 anos, em Recife, criando APIs, regras de negócio e sistemas com arquitetura clara, testes e atenção real à experiência de quem usa.
+            Desenvolvedora backend de 24 anos no Bradesco, atuando em investimentos, renda fixa e integrações Open Finance com foco em APIs críticas, segurança, observabilidade e cloud.
           </p>
 
           <div class="hero-actions" aria-label="Ações principais">
@@ -78,10 +78,10 @@
         <div class="hero-visual" aria-label="Foto e especialidades de Laura">
           <img class="portrait" src="/assets/images/profile-laura.jpg" alt="Laura de Freitas em frente ao computador com código aberto">
           <div class="capability-strip">
-            <span>APIs REST</span>
+            <span>Renda fixa</span>
+            <span>Open Finance</span>
             <span>Spring Boot</span>
-            <span>Testes</span>
-            <span>Angular</span>
+            <span>Azure</span>
           </div>
         </div>
       </div>
@@ -91,17 +91,64 @@
       <div class="section-inner split">
         <div>
           <p class="eyebrow">Sobre mim</p>
-          <h2>Construo backend com domínio bem modelado e uma visão prática de produto.</h2>
+          <h2>Construo backend para produtos financeiros onde regra de negócio, segurança e confiabilidade importam.</h2>
         </div>
 
         <div class="rich-text">
           <p>
-            Sou Laura de Freitas, desenvolvedora backend em Recife, PE. Minha base é Java com Spring Boot, mas também trabalho com Angular e TypeScript para transformar ideias em interfaces funcionais, responsivas e bem apresentadas.
+            Sou Laura de Freitas, Backend Software Engineer no Bradesco, em Recife, PE. Trabalho no ecossistema de investimentos com Java, Spring Boot, APIs REST, MongoDB, MySQL, Azure e integrações via Open Finance.
           </p>
           <p>
-            Tenho experiência com análise e manutenção de sistemas, criação de APIs REST, persistência com JPA, automações com jobs, testes automatizados e observabilidade. Gosto de código organizado, contratos claros e soluções que não quebram quando o projeto cresce.
+            Minha atuação passa por fluxos de aplicação, resgate e cancelamento, integração com pagamentos PIX, modernização de legados, segurança com TLS/OAuth2 e observabilidade com Dynatrace. Gosto de código organizado, contratos claros e soluções preparadas para crescer sem perder rastreabilidade.
           </p>
         </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section experience-section">
+      <div class="section-inner">
+        <div class="section-heading compact-heading">
+          <p class="eyebrow">Experiência atual</p>
+          <h2>Backend no Bradesco, com escopo real em investimentos e sistemas distribuídos.</h2>
+        </div>
+
+        <article class="experience-card">
+          <div class="experience-header">
+            <div>
+              <p class="role-label">{{ experience.company }}</p>
+              <h3>{{ experience.role }}</h3>
+            </div>
+            <div class="role-meta">
+              <span>{{ experience.period }}</span>
+              <span>{{ experience.location }}</span>
+            </div>
+          </div>
+
+          <p class="experience-summary">{{ experience.summary }}</p>
+
+          <div class="experience-content">
+            <ul class="impact-list">
+              @for (bullet of experience.bullets; track bullet) {
+                <li>{{ bullet }}</li>
+              }
+            </ul>
+
+            <div class="backend-area-grid">
+              @for (area of backendAreas; track area.title) {
+                <article class="backend-area-card">
+                  <h4>{{ area.title }}</h4>
+                  <p>{{ area.description }}</p>
+                </article>
+              }
+            </div>
+          </div>
+
+          <ul class="tag-list experience-tags" aria-label="Stack utilizada no Bradesco">
+            @for (tech of experience.stack; track tech) {
+              <li>{{ tech }}</li>
+            }
+          </ul>
+        </article>
       </div>
     </section>
 
@@ -109,7 +156,7 @@
       <div class="section-inner">
         <div class="section-heading">
           <p class="eyebrow">Projetos</p>
-          <h2>Trabalho com engenharia backend, mas sem descuidar da entrega visual.</h2>
+          <h2>Projetos e entregas que demonstram domínio técnico além do discurso.</h2>
         </div>
 
         <div class="project-grid">
@@ -138,7 +185,7 @@
       <div class="section-inner">
         <div class="section-heading">
           <p class="eyebrow">Stack atual</p>
-          <h2>Capacidades técnicas alinhadas ao que você está construindo agora.</h2>
+          <h2>Stack posicionada para backend pleno em produto financeiro.</h2>
         </div>
 
         <div class="stack-grid">
@@ -162,7 +209,7 @@
           <p class="eyebrow">Contato</p>
           <h2>Vamos conversar sobre a próxima oportunidade?</h2>
           <p>
-            Estou aberta a conversas sobre desenvolvimento backend, APIs, sistemas Java/Spring e oportunidades em times que valorizam qualidade técnica.
+            Estou aberta a conversas sobre backend Java/Spring, Open Finance, APIs financeiras, modernização cloud e times que valorizam engenharia com responsabilidade.
           </p>
         </div>
 

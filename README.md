@@ -1,6 +1,6 @@
 # Laura de Freitas | Portfólio
 
-Portfólio profissional reconstruído em Angular, com foco em backend Java/Spring, APIs, arquitetura e qualidade de entrega.
+Portfólio profissional reconstruído em Angular, com foco em backend Java/Spring, Open Finance, APIs financeiras, cloud, observabilidade e qualidade de entrega.
 
 ## Stack
 
@@ -8,7 +8,8 @@ Portfólio profissional reconstruído em Angular, com foco em backend Java/Sprin
 - TypeScript
 - HTML semântico
 - CSS responsivo
-- Java 21 e Spring Boot como stack profissional destacada
+- Java e Spring Boot como stack profissional destacada
+- Open Finance, PIX, TLS/OAuth2, Dynatrace e Azure como experiência principal
 
 ## Rodar localmente
 

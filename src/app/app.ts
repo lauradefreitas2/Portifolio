@@ -18,6 +18,21 @@ type Experience = {
   label: string;
 };
 
+type RoleExperience = {
+  role: string;
+  company: string;
+  period: string;
+  location: string;
+  summary: string;
+  bullets: string[];
+  stack: string[];
+};
+
+type BackendArea = {
+  title: string;
+  description: string;
+};
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.html',
@@ -35,16 +50,78 @@ export class App {
 
   readonly navItems = [
     { label: 'Sobre', href: '#about' },
+    { label: 'Experiência', href: '#experience' },
     { label: 'Projetos', href: '#projects' },
     { label: 'Stack', href: '#stack' },
     { label: 'Contato', href: '#contact' }
   ];
 
   readonly highlights: Experience[] = [
-    { value: '24', label: 'anos' },
-    { value: 'Recife', label: 'PE' },
-    { value: 'Backend', label: 'Java e Spring' },
-    { value: 'Angular', label: 'frontend moderno' }
+    { value: 'Bradesco', label: 'investimentos e renda fixa' },
+    { value: '2x', label: 'Azure Certified' },
+    { value: 'Open Finance', label: 'integrações reguladas' },
+    { value: 'PIX', label: 'pagamentos e rastreabilidade' }
+  ];
+
+  readonly experience: RoleExperience = {
+    role: 'Backend Software Engineer',
+    company: 'Bradesco',
+    period: 'jan 2024 - o momento',
+    location: 'Recife, PE · Híbrido',
+    summary:
+      'Atuação no ecossistema de investimentos, com foco em renda fixa, Open Finance e fluxos financeiros críticos para aplicação, resgate e cancelamento.',
+    bullets: [
+      'Desenvolvimento e evolução de APIs backend para jornadas financeiras end-to-end, integrando sistemas internos, legados e serviços externos.',
+      'Integração com habilitador de pagamentos via PIX para aplicações financeiras usando saldo de outras instituições.',
+      'Sustentação de regras de negócio críticas com foco em consistência, segurança, rastreabilidade e conformidade regulatória.',
+      'Modernização de sistemas legados e adaptação de serviços para cloud Azure, contribuindo para escalabilidade e evolução arquitetural.',
+      'Implementação e melhoria de observabilidade, segurança com TLS/OAuth2 e integração entre soluções distribuídas.'
+    ],
+    stack: [
+      'Java',
+      'Spring Boot',
+      'Spring Security',
+      'APIs REST',
+      'MongoDB',
+      'MySQL',
+      'Redis',
+      'Azure',
+      'Dynatrace',
+      'Docker',
+      'JMeter',
+      'Bamboo',
+      'GitHub',
+      'Bitbucket',
+      'Jira',
+      'Mainframe',
+      'Angular',
+      'Node.js',
+      'NestJS',
+      'Next.js'
+    ]
+  };
+
+  readonly backendAreas: BackendArea[] = [
+    {
+      title: 'APIs financeiras críticas',
+      description:
+        'Construção de endpoints para aplicação, resgate e cancelamento, com regras de negócio consistentes e contratos claros.'
+    },
+    {
+      title: 'Open Finance e pagamentos',
+      description:
+        'Integrações com sistemas externos e habilitador PIX, cuidando de rastreabilidade, confiabilidade e fluxos end-to-end.'
+    },
+    {
+      title: 'Cloud e modernização',
+      description:
+        'Migração e adaptação de serviços para Azure, evolução de sistemas legados e melhoria de arquitetura distribuída.'
+    },
+    {
+      title: 'Segurança e observabilidade',
+      description:
+        'Aplicação de práticas com TLS/OAuth2, monitoramento com Dynatrace, testes de carga com JMeter e foco em disponibilidade.'
+    }
   ];
 
   readonly projects: Project[] = [
@@ -66,31 +143,31 @@ export class App {
       title: 'Sistemas e APIs',
       label: 'Engenharia',
       description:
-        'Experiência com análise, manutenção e evolução de sistemas, organização de camadas, contratos HTTP, regras de domínio e qualidade orientada a testes.',
-      stack: ['DDD', 'Ports & Adapters', 'OpenAPI', 'Mockito', 'Docker Compose', 'Azure']
+        'Experiência com análise, manutenção e evolução de sistemas distribuídos, contratos HTTP, regras de domínio, segurança e qualidade orientada a testes.',
+      stack: ['Open Finance', 'TLS/OAuth2', 'Dynatrace', 'JMeter', 'Docker', 'Azure']
     }
   ];
 
   readonly skillGroups: SkillGroup[] = [
     {
-      title: 'Backend',
-      items: ['Java 21', 'Spring Boot', 'Spring Web', 'Spring Data JPA', 'REST APIs', 'Jakarta Validation']
+      title: 'Backend financeiro',
+      items: ['Java', 'Spring Boot', 'Spring Security', 'APIs REST', 'Open Finance', 'PIX']
     },
     {
       title: 'Arquitetura e domínio',
-      items: ['Arquitetura Hexagonal', 'DDD', 'Ports & Adapters', 'Use Cases', 'Mappers', 'Tratamento global de erros']
+      items: ['Sistemas distribuídos', 'Arquitetura Hexagonal', 'DDD', 'Integrações legadas', 'Regras críticas', 'Alta disponibilidade']
     },
     {
       title: 'Dados e infraestrutura',
-      items: ['PostgreSQL', 'H2', 'Docker Compose', 'Quartz Scheduler', 'Azure', 'Spring Security']
+      items: ['MongoDB', 'MySQL', 'PostgreSQL', 'Redis', 'Docker', 'Azure']
     },
     {
       title: 'Qualidade e observabilidade',
-      items: ['JUnit 5', 'Mockito', 'Testes de controller', 'Testes de persistência', 'Actuator', 'Micrometer Prometheus']
+      items: ['Dynatrace', 'JMeter', 'JUnit 5', 'Mockito', 'Actuator', 'Prometheus']
     },
     {
-      title: 'Frontend',
-      items: ['Angular', 'TypeScript', 'HTML semântico', 'CSS moderno', 'Responsividade', 'Acessibilidade']
+      title: 'Ferramentas e frontend',
+      items: ['Git', 'GitHub', 'Bitbucket', 'Bamboo', 'Jira', 'Angular']
     }
   ];
 
