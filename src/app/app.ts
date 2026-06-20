@@ -39,7 +39,7 @@ type BackendArea = {
   styleUrl: './app.css'
 })
 export class App {
-  readonly email = 'laurafribeirooabreu@gmail.com';
+  readonly email = 'defreitaslaura737@gmail.com';
   readonly currentYear = new Date().getFullYear();
   readonly menuOpen = signal(false);
   readonly lightTheme = signal(false);
