@@ -29,3 +29,19 @@ http://127.0.0.1:4200/
 ```bash
 pnpm build
 ```
+
+## Publicação
+
+O projeto está preparado para publicar no GitHub Pages via GitHub Actions.
+
+No GitHub, acesse:
+
+```text
+Settings > Pages > Build and deployment > Source > GitHub Actions
+```
+
+Depois disso, todo push na branch `main` executa o build e publica o site em:
+
+```text
+https://lauradefreitas2.github.io/Portifolio/
+```
