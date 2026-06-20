@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.angular/
+.DS_Store
+npm-debug.log*
+pnpm-debug.log*
+yarn-error.log*
